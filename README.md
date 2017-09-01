@@ -1,53 +1,38 @@
-# MyBot
+## Deployment steps
 
-## Steps to run above code
+### Create an account on Heroku
 
-### 1. Create and activate virtual environment
+[Heroku](https://www.heroku.com)
 
-- Install **virtualenv**
-    ```
-    pip install virtualenv
-    ```
-    
-- Create virtual environment in project directory
-    ```
-    virtualenv venv
-    ```
-    
-- Activate virtual environment
-    ```
-    source venv/bin/activate
-    ```
-    For windows:
-    ```
-    venv\Scripts\activate
-    ```
-    
-### 2. Install dependencies
+### Download Heroku CLI
+
+[Download and install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+### Clone this github repo
 
 ```
-pip install -r requirements.txt
+git clone https://github.com/nikhilkumarsingh/NewsBot.git
 ```
 
-### 3. Run flask app
+### Create new Heroku app
+
+Open terminal in project directory and create new Heroku app using this command:
 
 ```
-python app.py
+heroku create <your-app-name>
 ```
 
-### 4. Setup ngrok
+### Put environment variables in Heroku app
 
-Download from here: https://ngrok.com/
+Open **Settings** tab of your Heroku app and set the environment/config variables.
 
-Open terminal in the folder where ngrok has been installed and run:
+![](http://i.imgur.com/fXNXJhu.png)
+
+
+### Push to remote Heroku git repo
 
 ```
-ngrok http 8000
+git add .
+git commit -m "<your commit message>"
+git push heroku master
 ```
-
-### 5. Setup webhook
-
-Edit/setup the webhook for your facebook app.
-
-
-Test the bot! :)
